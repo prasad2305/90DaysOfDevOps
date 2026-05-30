@@ -1,0 +1,3 @@
+I am a DevOps Engineer.
+I work with Linux, Docker, and Kubernetes.
+I automate deployments using CI/CD pipelines.
