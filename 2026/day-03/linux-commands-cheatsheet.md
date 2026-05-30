@@ -27,6 +27,10 @@
 - du - Show file or folder size
 
 # Networking Troubleshooting Commands 
+- ping - Checks if a server is reachable
+- ip addr - Shows your system’s IP address
+- dig - Finds IP address of a domain using DNS
+- curl - Gets data from a website or API
 - ifconfig / ip a - Shows network interfaces and their IP addresses
 - netstat -a - Shows all active connections and listening ports with services
 - traceroute <host> - Shows the path taken by data packets to reach a server
