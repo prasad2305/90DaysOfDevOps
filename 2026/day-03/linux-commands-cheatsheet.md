@@ -2,8 +2,8 @@
 
 # Process Management Commands
 - ps - Shows list of running processes
-- ps aux - Displays all running processes with CPU and memory usage
-- top - Displays real-time process usage (CPU, memory)
+- ps aux - Displays all running processes with CPU and memory usage (Snapshot of all processes)
+- top - Displays real-time process usage (CPU, memory) (Live monitoring of processes)
 - kill PID - Terminates a process using its Process ID.
 - pgrep - Finds process ID by name
 - uptime - Shows how long system has been running
