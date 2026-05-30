@@ -63,4 +63,16 @@ Observation : Recent login attempts record. No suspicious activity detected.
 
 
 
+# Quick Review
 
+- SSH service is running properly.
+- CPU and disk usage are normal.
+- Port 22 is open and accepting connections.
+- No errors found in the logs.
+
+# If the Issue Worsens
+
+- Check the logs again.
+- Monitor CPU and disk usage.
+- Restart the SSH service.
+- Verify that port 22 is listening correctly.
