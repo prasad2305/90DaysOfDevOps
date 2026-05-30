@@ -1,4 +1,7 @@
 
+# RUNBOOK for ssh service
+
+This runbook provides quick troubleshooting steps if the SSH service goes down.
 
 # Environment basics
 - Command : uname -a (Tells you what kernel and architecture the system is using.)
@@ -25,26 +28,38 @@
 
 
 # Disk / IO
-- df -h 
+- df -h  (Shows disk space usage of all mounted filesystems in a human-readable format.)
 <img width="1920" height="344" alt="image" src="https://github.com/user-attachments/assets/a9d34225-b13a-4285-8dfb-9eb13cbffa19" />
 
-- sudo du -sh /var/log
+- sudo du -sh /var/log (hows the total size of the /var/log directory.)
 <img width="1920" height="224" alt="image" src="https://github.com/user-attachments/assets/cf13600c-39a5-4f94-9dba-237307726c7c" />
 
 
-- iostat
+- iostat (Displays CPU and disk I/O performance statistics.)
 <img width="1920" height="366" alt="image" src="https://github.com/user-attachments/assets/aac2ff09-6688-42b9-bcdd-1f1180e24259" />
 
 
 # Network
 
-- sudo ss -tulpn | grep  sshd
+- sudo ss -tulpn | grep  sshd (Checks if the SSH service (sshd) is listening on a network port.)
 <img width="1920" height="246" alt="image" src="https://github.com/user-attachments/assets/e420ac62-c9fe-40d1-95b4-03c6f1789dbe" />
 
-- netstat -tulpn
+- netstat -tulpn (Lists network ports that are currently in use.)
 <img width="1920" height="438" alt="image" src="https://github.com/user-attachments/assets/8aeeaf9f-23f1-4cbe-8823-d6f37b3e669e" />
 
+- curl -I http://localhost:5000 (Checks if the application is responding on port 5000.)
+<img width="1920" height="165" alt="image" src="https://github.com/user-attachments/assets/71cc2fe9-9df0-4d5d-90c2-1527342fd043" />
 
+
+# Logs
+
+- Command : journalctl -u ssh -n 50
+
+Observation : Last 50 lines shows normal authentication attempts no errors or warnings.
+
+- Command :tail -n 50 /var/log/auth.log 
+
+Observation : Recent login attempts record. No suspicious activity detected.
 
 
 
