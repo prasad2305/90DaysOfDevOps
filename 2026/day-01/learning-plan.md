@@ -1,4 +1,4 @@
-**My understanding of DevOps**
+# My understanding of DevOps
 
 DevOps is a culture that helps development and operations teams work together to build, test, and deploy software efficiently. It uses automation, continuous integration, and continuous delivery to make software releases faster, more reliable, and more secure.
 
