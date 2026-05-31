@@ -29,7 +29,7 @@ You will:
 
 ### Step 2: Connect via SSH
 
-`ssh -i "dovops.pem" ec2-user@ec2-54-175-61-228.compute-1.amazonaws.com`
+`ssh -i "C:\Users\prsds\Downloads\devops.pem" ec2-user@ec2-54-163-16-241.compute-1.amazonaws.com`
 
 
 # Install Nginx 
@@ -59,6 +59,7 @@ Ensure inbound rule:
 HTTP (80) -  0.0.0.0/0
 ### Step 7: Open Browser and Test Web Server
 `http://<public-ip>`
+http://54.163.16.241/
 
 Expected Result:
 
@@ -102,4 +103,4 @@ Nginx Welcome Page should be visible
 
 ### Step 17: Download Log File to Local Machine
 Run this on your local system (not EC2):
-`scp -i "dovops.pem" ec2-user@ec2-54-175-61-228.compute-1.amazonaws.com:~/nginx-logs.txt .`
+`scp -i "C:\Users\prsds\Downloads\devops.pem" ec2-user@54.163.16.241:/var/log/nginx/access.log .`
