@@ -29,7 +29,7 @@ You will:
 
 ### Step 2: Connect via SSH
 
-`ssh -i "C:\Users\prsds\Downloads\devops.pem" ec2-user@ec2-54-163-16-241.compute-1.amazonaws.com`
+`ssh -i "C:\Users\prsds\Downloads\devops.pem" ec2-user@54.163.16.241`
 
 
 # Install Nginx 
@@ -85,22 +85,21 @@ Nginx Welcome Page should be visible
 ### Step 13: Verify Docker Installation
 `docker --version`
 
+### Step 14 : Check Docker service (system logs)
+
+This shows logs of the Docker daemon (engine)
+
+`sudo journalctl -u docker -f`
+
 
 # Extract Nginx Logs
 
-### Step 14: Check Nginx Logs 
+### Step 15: Check Nginx Logs 
 `sudo cat /var/log/nginx/access.log`
 
 `sudo cat /var/log/nginx/error.log`
 
-### Step 15: Save Logs to File
-`sudo cat /var/log/nginx/access.log > nginx-logs.txt`
 
-`sudo cat /var/log/nginx/error.log >> nginx-logs.txt`
-
-### Step 16: Verify Log File
-`cat nginx-logs.txt`
-
-### Step 17: Download Log File to Local Machine
+### Step 16: Download Log File to Local Machine
 Run this on your local system (not EC2):
 `scp -i "C:\Users\prsds\Downloads\devops.pem" ec2-user@54.163.16.241:/var/log/nginx/access.log .`
